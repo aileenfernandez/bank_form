@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Minor Bank Account Opening Form</title>
+  <style>
+    body { font-family: Arial, sans-serif; padding: 20px; max-width: 800px; margin: auto; background: #f9f9f9; }
+    h2 { background: #007bff; color: white; padding: 10px; }
+    form { background: white; padding: 20px; border-radius: 8px; box-shadow: 0 0 10px rgba(0,0,0,0.1); }
+    label { display: block; margin-top: 15px; font-weight: bold; }
+    input, select, textarea { width: 100%; padding: 8px; margin-top: 5px; border-radius: 4px; border: 1px solid #ccc; }
+    .checkboxes label { display: inline-block; font-weight: normal; margin-right: 15px; }
+    .section { margin-top: 30px; }
+    button { margin-top: 20px; padding: 10px 20px; background: #007bff; color: white; border: none; border-radius: 4px; cursor: pointer; }
+    .disclaimer{text-align: center; background-color:  #E3F2FD; border-radius: 8px;}
+  </style>
+</head>
+<body>
+  <h2>Bank Account Opening Form for Kids</h2>
+  <p class="disclaimer"><span class="note"><strong>Friendly reminder</strong></span><br>
+    Everything you type here stays on this page and isn’t saved anywhere.</p>
+
+  <form>
+    <div class="section">
+      <h3>Section A: Child's Information</h3>
+      <label>Full Name:</label><input type="text" name="child_name" />
+      <label>Date of Birth:</label><input type="date" name="child_dob" />
+      <label>Gender:</label>
+      <select name="child_gender">
+        <option>Male</option>
+        <option>Female</option>
+        <option>Other</option>
+      </select>
+      <label>Age:</label><input type="number" name="child_age" min="0" />
+      <label>Nationality:</label><input type="text" name="child_nationality" />
+      <label>School Name:</label><input type="text" name="school" />
+      <label>Class/Grade:</label><input type="text" name="grade" />
+      <label>Hobbies/Interests:</label><textarea name="hobbies"></textarea>
+    </div>
+
+    <div class="section">
+      <h3>Section B: Parent/Guardian Information</h3>
+      <label>Full Name:</label><input type="text" name="parent_name" />
+      <label>Relationship:</label>
+      <select name="relationship">
+        <option>Mother</option>
+        <option>Father</option>
+        <option>Legal Guardian</option>
+      </select>
+      <label>Date of Birth:</label><input type="date" name="parent_dob" />
+      <label>Occupation:</label><input type="text" name="occupation" />
+      <label>Contact Number:</label><input type="tel" name="contact" />
+      <label>Email:</label><input type="email" name="email" />
+      <label>Address:</label><textarea name="address"></textarea>
+    </div>
+
+    <div class="section">
+      <h3>Section C: Identification Documents</h3>
+      <div class="checkboxes">
+        <label><input type="checkbox" name="docs" value="birth_certificate" /> Child’s Birth Certificate</label>
+        <label><input type="checkbox" name="docs" value="guardian_id" /> Parent’s/Guardian’s ID</label>
+        <label><input type="checkbox" name="docs" value="address_proof" /> Address Proof</label>
+        <label><input type="checkbox" name="docs" value="child_photo" /> Passport Photo (Child)</label>
+        <label><input type="checkbox" name="docs" value="parent_photo" /> Passport Photo (Parent/Guardian)</label>
+      </div>
+    </div>
+
+    <div class="section">
+      <h3>Section D: Account Preferences</h3>
+      <label>Type of Account:</label>
+      <select name="account_type">
+        <option>Minor Savings Account</option>
+        <option>Education Savings Plan</option>
+      </select>
+      <label>Mode of Operation:</label>
+      <select name="operation_mode">
+        <option>Parent/Guardian Operated</option>
+        <option>Joint with Minor (if 10+ years)</option>
+      </select>
+      <label>Initial Deposit:</label><input type="number" name="initial_deposit" min="0" />
+      <label>Preferred Branch:</label><input type="text" name="branch" />
+    </div>
+
+    <div class="section">
+      <h3>Section E: Declaration</h3>
+      <p>I hereby declare that the information provided is true and correct to the best of my knowledge. I understand that the account will be operated under the bank’s rules for minor accounts.</p>
+      <label>Parent/Guardian Signature:</label><input type="text" name="signature" />
+      <label>Date:</label><input type="date" name="declaration_date" />
+    </div>
+
+    <button type="submit">Submit Application</button>
+  </form>
+</body>
+</html>
